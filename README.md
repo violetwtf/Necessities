@@ -27,7 +27,7 @@ Usage | Description | Example
 `/gm <identifier/gamemode>` | Set your game mode | `/gm creative`
 `/gm <identifier/gamemode> <players...>` | Set player's game mode | `/gm adventure *`
 `/gm<identifier>` | Set your game mode | `/gmc`
-`/gm<identifier> <players...>` | Set player's game mode `/gm0 violetwtf`
+`/gm<identifier> <players...>` | Set player's game mode | `/gm0 violetwtf`
 
 Where identifiers are:
 * 0 or s, meaning survival mode
@@ -41,7 +41,7 @@ Where gamemodes are:
 * adventure
 * spectator
 
-`*`, when used in place of players, refers to all players.
+The character `*`, when used in place of players, refers to all players.
 
 ## Releases
 Releases won't be built until 1.0.0, but you can build this yourself! See [Building](#building).
