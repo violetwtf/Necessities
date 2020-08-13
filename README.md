@@ -13,6 +13,9 @@ Essentials just can't provide. This results in me re-writing the same commands 1
 compiling all the commands I use into Necessities. Necessities (Ness for short) also has the goal
 of command syntax that just makes sense.
 
+## Where does it work?
+It's designed to work on Paper 1.16.1 and 1.15.2. Nothing else is supported.
+
 ## Commands
 All commands also have aliases that are `/n` + the command name and its aliases.
 
