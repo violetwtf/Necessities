@@ -23,11 +23,11 @@ Permission: `ness.gamemode`
 Usage | Description | Example
 --- | --- | ---
 `/gm` | Toggle between Creative and Survival | `/gm`
-`/gm <players...>` | Toggle player between Creative and Survival | `/gm violetwtf violetlol`
+`/gm <players...>` | Toggle players between Creative and Survival | `/gm violetwtf violetlol`
 `/gm <identifier/gamemode>` | Set your game mode | `/gm creative`
-`/gm <identifier/gamemode> <players...>` | Set player's game mode | `/gm adventure *`
+`/gm <identifier/gamemode> <players...>` | Set players' game modes | `/gm adventure *`
 `/gm<identifier>` | Set your game mode | `/gmc`
-`/gm<identifier> <players...>` | Set player's game mode | `/gm0 violetwtf`
+`/gm<identifier> <players...>` | Set players' game modes | `/gm0 violetwtf`
 
 Where identifiers are:
 * 0 or s, meaning survival mode
