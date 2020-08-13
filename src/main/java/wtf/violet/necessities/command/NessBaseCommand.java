@@ -3,8 +3,6 @@ package wtf.violet.necessities.command;
 import wtf.violet.common.command.BaseCommand;
 import wtf.violet.necessities.Necessities;
 
-import java.util.Arrays;
-
 public abstract class NessBaseCommand extends BaseCommand<Necessities>
 {
 

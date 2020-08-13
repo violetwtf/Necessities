@@ -21,7 +21,7 @@ All commands also have aliases that are `/n` + the command name and its aliases.
 
 ### /gamemode
 Permission: `ness.gamemode`  
-**Aliases**: `/gm`, `/gm<identifier>` (will be used for examples)
+Aliases: `/gm`, `/gm<identifier>` (will be used for examples)
 
 Usage | Description | Example
 --- | --- | ---
@@ -45,6 +45,12 @@ Where gamemodes are:
 * spectator
 
 The character `*`, when used in place of players, refers to all players.
+
+### /necessities
+Permission: none  
+Alias: `/ness`
+
+Displays information about the plugin.
 
 ## Releases
 Releases won't be built until 1.0.0, but you can build this yourself! See [Building](#building).
