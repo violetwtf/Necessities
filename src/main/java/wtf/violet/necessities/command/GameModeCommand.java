@@ -256,8 +256,6 @@ public class GameModeCommand extends NessBaseCommand
         {
             final List<String> identifiers = new ArrayList<>(IDENTIFIERS.keySet());
 
-            System.out.println(args.length);
-
             // gm
             switch (args.length)
             {
