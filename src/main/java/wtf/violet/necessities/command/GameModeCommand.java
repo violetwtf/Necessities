@@ -170,7 +170,7 @@ public class GameModeCommand extends NessBaseCommand
         {
             if (mode == null)
             {
-                success(sender, "Toggle the game mode of " + zero.getName() + ".");
+                success(sender, "Toggled the game mode of " + zero.getName() + ".");
             }
             else
             {

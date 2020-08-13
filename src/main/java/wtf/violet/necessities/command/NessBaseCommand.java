@@ -32,8 +32,6 @@ public abstract class NessBaseCommand extends BaseCommand<Necessities>
             i += 2;
         }
 
-        System.out.println(Arrays.toString(next));
-
         return next;
     }
 
