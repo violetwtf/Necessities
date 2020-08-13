@@ -4,7 +4,7 @@ Table of Contents
    * [Necessities](#necessities)
       * [Commands](#commands)
          * [/gamemode](#gamemode)
-         * [/necessities](#necessities)
+         * [/vanish](#vanish)
       * [Releases](#releases)
       * [Building](#building)
       
@@ -47,11 +47,13 @@ Where gamemodes are:
 
 The character `*`, when used in place of players, refers to all players.
 
-### /necessities
-Permission: none  
-Alias: `/ness`
+### /vanish
+Permission: ness.vanish
 
-Displays information about the plugin.
+Usage | Description | Example
+--- | --- | ---
+| `/vanish` | Vanish yourself | `/v`
+| `/vanish <targets...>` | Vanish others | `/vanish *`
 
 ## Releases
 Releases won't be built until 1.0.0, but you can build this yourself! See [Building](#building).

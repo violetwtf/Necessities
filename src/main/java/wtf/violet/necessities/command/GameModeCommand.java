@@ -5,6 +5,7 @@ import org.bukkit.Server;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import wtf.violet.necessities.Necessities;
+import wtf.violet.necessities.util.ParseUtil;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -77,7 +78,7 @@ public class GameModeCommand extends NessBaseCommand
                 senderTarget = true;
             } else
             {
-                targets = getTargetsFromArgs(sender, args);
+                targets = ParseUtil.getTargetsFromArgs(sender, args);
             }
         } else // e.g /gm
         {
@@ -95,14 +96,14 @@ public class GameModeCommand extends NessBaseCommand
                         senderTarget = true;
                     } else // gm c ...
                     {
-                        targets = getTargetsFromArgs(
+                        targets = ParseUtil.getTargetsFromArgs(
                             sender,
                             Arrays.copyOfRange(args, 1, args.length)
                         );
                     }
                 } else
                 {
-                    targets = getTargetsFromArgs(sender, args);
+                    targets = ParseUtil.getTargetsFromArgs(sender, args);
                 }
             }
         }
@@ -190,42 +191,6 @@ public class GameModeCommand extends NessBaseCommand
             modeString.substring(1).toLowerCase();
     }
 
-    private List<Player> getTargetsFromArgs(
-        final CommandSender sender,
-        final String[] args
-    )
-    {
-        if (args.length == 0)
-        {
-            error(sender, "Invalid target! None provided.");
-            return null;
-        }
-
-        final Server server = getPlugin().getServer();
-
-        if (args[0].equals("*"))
-        {
-            return new ArrayList<>(server.getOnlinePlayers());
-        }
-
-        final List<Player> targets = new ArrayList<>();
-
-        for (final String name : args)
-        {
-            final Player player = server.getPlayer(name);
-
-            if (player == null)
-            {
-                error(sender, "Invalid target: " + name);
-                return null;
-            }
-
-            targets.add(player);
-        }
-
-        return targets;
-    }
-
     // TODO: Permission check
     @Override
     public List<String> tab(
@@ -237,11 +202,7 @@ public class GameModeCommand extends NessBaseCommand
     {
         List<String> result = Collections.emptyList();
 
-        final List<String> playerSuggestions = plugin.getServer()
-            .getOnlinePlayers()
-            .stream()
-            .map(Player::getName)
-            .collect(Collectors.toList());
+        final List<String> playerSuggestions = ParseUtil.getTargetTabComplete(false);
 
         // /gm<identifier>
         if (GAME_MODE_ALIASES.containsKey(alias))
