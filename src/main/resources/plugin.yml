@@ -1,0 +1,7 @@
+name: Necessities
+version: ${project.version}
+main: wtf.violet.necessities.Necessities
+api-version: 1.13
+authors: [violetwtf]
+description: Minecraft plugin for basic administration
+website: https://violet.wtf
