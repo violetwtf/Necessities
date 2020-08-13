@@ -85,7 +85,7 @@ public class ParseUtil
             return Collections.emptyList();
         }
 
-        return getTargetTabComplete(args.length > 1);
+        return getTargetTabComplete(args.length == 1);
     }
 
 }
