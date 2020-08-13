@@ -50,7 +50,7 @@ public class GameModeCommand extends NessBaseCommand
             ness,
             "Set your game mode",
             "(usage depends on the command)",
-            "ness.gamemode",
+            "gamemode",
             getCustomAliases("gamemode", "gm")
         );
     }

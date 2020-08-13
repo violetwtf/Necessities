@@ -19,7 +19,13 @@ public abstract class NessBaseCommand extends BaseCommand<Necessities>
         final String... aliases
     )
     {
-        super(ness, description, usage, permission, getAliases(aliases));
+        super(
+            ness,
+            description,
+            usage,
+            permission == null ? null : "ness." + permission,
+            getAliases(aliases)
+        );
     }
 
     @Override

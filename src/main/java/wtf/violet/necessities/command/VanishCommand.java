@@ -15,7 +15,7 @@ public class VanishCommand extends NessBaseCommand
 
     public VanishCommand(final Necessities ness)
     {
-        super(ness, "Hide players", "[targets]", "ness.vanish", "vanish", "!v");
+        super(ness, "Hide players", "[targets]", "vanish", "vanish", "!v");
     }
 
     @Override
