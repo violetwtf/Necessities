@@ -30,7 +30,7 @@ public abstract class NessBaseCommand extends BaseCommand<Necessities>
 
     @Override
     public void register()
-        throws ClassNotFoundException,
+        throws
         NoSuchMethodException,
         InvocationTargetException,
         IllegalAccessException
