@@ -4,6 +4,7 @@ Table of Contents
    * [Necessities](#necessities)
       * [Commands](#commands)
          * [/gamemode](#gamemode)
+         * [/necessities](#necessities)
       * [Releases](#releases)
       * [Building](#building)
       
