@@ -14,8 +14,8 @@ public class NecessitiesCommand extends NessBaseCommand
             "View information about Necessities",
             "",
             null,
-            "necessities",
-            "ness"
+            "!necessities",
+            "!ness"
         );
     }
 

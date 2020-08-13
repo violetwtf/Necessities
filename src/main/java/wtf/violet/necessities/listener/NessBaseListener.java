@@ -9,6 +9,9 @@ public abstract class NessBaseListener implements Listener
     public void register(final Necessities ness)
     {
         ness.getServer().getPluginManager().registerEvents(this, ness);
+        ness.getLogger().info(
+            "Listener > " + getClass().getSimpleName() + " registered successfully!"
+        );
     }
 
 }

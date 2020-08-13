@@ -4,6 +4,9 @@ import wtf.violet.common.command.BaseCommand;
 import wtf.violet.necessities.Necessities;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class NessBaseCommand extends BaseCommand<Necessities>
 {
@@ -35,15 +38,28 @@ public abstract class NessBaseCommand extends BaseCommand<Necessities>
 
     private static String[] getAliases(final String... aliases)
     {
-        final String[] next = new String[(aliases.length * 2)];
+        final List<String> filtered = Arrays.stream(aliases)
+            .map(alias -> alias.replace("!", ""))
+            .collect(Collectors.toList());
+
+        long addCount = Arrays.stream(aliases).filter(alias -> !alias.startsWith("!")).count();
+
+        final String[] next = new String[(int) (aliases.length + addCount)];
 
         int i = 0;
 
-        for (final String alias : aliases)
+        for (int j = 0; j < aliases.length; j++)
         {
-            next[i] = alias;
-            next[i + 1] = "n" + alias;
-            i += 2;
+            final String alias = aliases[j];
+            next[i] = filtered.get(j);
+
+            if (!alias.startsWith("!"))
+            {
+                next[i + 1] = "n" + alias;
+                i++;
+            }
+
+            i++;
         }
 
         return next;
